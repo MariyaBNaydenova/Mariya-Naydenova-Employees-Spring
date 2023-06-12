@@ -17,6 +17,5 @@
 			<br><br>
 			<input type="submit" value="BACK TO FILE UPLOAD" class="buttons" id="submitFile">
 		</form>	
-		
 	</body>
 </html>

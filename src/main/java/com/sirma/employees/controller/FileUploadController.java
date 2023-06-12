@@ -1,5 +1,7 @@
 package com.sirma.employees.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -21,7 +23,6 @@ public class FileUploadController {
 		this.fileService = fileService;
 	}
 	
-	
 	@RequestMapping("/")
 	public String start() {
 		return "fileUpload";
@@ -29,9 +30,17 @@ public class FileUploadController {
 
 	@PostMapping("/fileUpload")
 	public String receiveFile(@RequestParam("file") MultipartFile file, ModelMap model) {
-		String result = fileService.findResult(file);	
-		model.addAttribute("result", result);
-		return "resultPage";		
+		
+		String result = fileService.checkErrors(file);
+		
+		if(result.equals("OK")) {
+			List<String[]> grid = fileService.getDataGridWithCommonProjects(file);
+			model.addAttribute("grid", grid);
+			return "dataGrid";
+		} else {
+			model.addAttribute("result", result);
+			return "resultPage";
+		}
 	}
 		
 	@GetMapping("/fileUpload")

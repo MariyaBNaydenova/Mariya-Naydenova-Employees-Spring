@@ -8,16 +8,16 @@ import org.springframework.stereotype.Repository;
 public class ProjectBean {
 	
     private int projectId;
-    private LocalDateTime from;
-    private LocalDateTime to;
+    private LocalDateTime fromDate;
+    private LocalDateTime toDate;
     
     public ProjectBean() {
     }
 
     public ProjectBean(int projectId, LocalDateTime from, LocalDateTime to) {
         this.projectId = projectId;
-        this.from = from;
-        this.to = to;
+        this.fromDate = from;
+        this.toDate = to;
     }
     
     public int getProjectId() {
@@ -28,20 +28,20 @@ public class ProjectBean {
         this.projectId = projectId;
     }
 
-    public LocalDateTime getFrom() {
-        return from;
+    public LocalDateTime getFromDate() {
+        return fromDate;
     }
 
-    public void setFrom(LocalDateTime from) {
-        this.from = from;
+    public void setFromDate(LocalDateTime from) {
+        this.fromDate = from;
     }
 
-    public LocalDateTime getTo() {
-        return to;
+    public LocalDateTime getToDate() {
+        return toDate;
     }
 
-    public void setTo(LocalDateTime to) {
-        this.to = to;
+    public void setToDate(LocalDateTime to) {
+        this.toDate = to;
     }
 
 }

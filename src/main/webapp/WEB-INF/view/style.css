@@ -35,18 +35,30 @@ p {
 	margin-left: -10px;
 }
 
-div {
-	margin: 50px;
-	height: 200px;
-	width: 250px;
-	border: 2px solid black;
-	text-align: center;
-	background-color: #bf8040;
-	font-weight: bold;
-	content: flex;
-	text-align: center;
-}
-
 #result {
 	margin-top: 50px
 }
+
+#dataGridForm {
+	height: auto;
+	width: 464px;
+}
+
+table {
+	border: 1px solid black;
+	margin-left: 30px;
+}
+
+th, td {
+	border: 1px solid black;
+}
+
+#back {
+	margin-bottom: 30px;
+	margin-left: -10px;
+}
+
+
+
+
+
