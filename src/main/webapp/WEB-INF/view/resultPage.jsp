@@ -11,10 +11,8 @@
 	<body>
 		<form method="GET" action="/" enctype="multipart/form-data">
 		<br><br>
-			<p >${result}</p> <!--  id="result" -->
-			<br>
-			
-			<br><br>
+			<p >${result}</p>
+			<br><br><br>
 			<input type="submit" value="BACK TO FILE UPLOAD" class="buttons" id="submitFile">
 		</form>	
 	</body>

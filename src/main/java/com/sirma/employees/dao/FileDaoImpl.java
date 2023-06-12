@@ -25,6 +25,7 @@ public class FileDaoImpl implements FileDao {
 	private final String ERROR_FILE_EMPTY = "File is empty or no file was uploaded.";
 	private final String ERROR_ONE_EMPLOYEE = "File must contain at least 2 emloyees.";
 	private final String ERROR_WRONG_FORMAT = "File content is not formatted as expected.";
+	private final String CORRECT_FILE = "OK";
 
 	@Override
 	public String checkErrors(MultipartFile file) {
@@ -38,7 +39,7 @@ public class FileDaoImpl implements FileDao {
 				if(employees.size() < 2) {
 					return ERROR_ONE_EMPLOYEE;
 				} else {
-					return "OK";
+					return CORRECT_FILE;
 				}
 			} else {
 				return ERROR_WRONG_FORMAT;
@@ -76,7 +77,6 @@ public class FileDaoImpl implements FileDao {
                 }
             }
         }
-        
 		return grid;
 	}
 	

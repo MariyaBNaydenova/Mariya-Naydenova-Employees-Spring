@@ -13,7 +13,6 @@
 			<p>Select file for upload: </p>
 			<br>
 			<input type="file" name="file" class="buttons">
-			
 			<br><br>
 			<input type="submit" value="SUBMIT" class="buttons" id="submitFile">
 		</form>	
